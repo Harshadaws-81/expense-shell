@@ -16,7 +16,7 @@ N="\e[0m"
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R Please run the script with root privileges $N" | tee -a $LOG_FILE
+        echo -e "$R Please run the script with root privileges $N $Y sudo $N" | tee -a $LOG_FILE
         exit 1
     fi
 }
@@ -39,7 +39,7 @@ dnf install mysql-server -y
 VALIDATE $? "Installing MySQL Server"
 
 systemctl enable mysqld
-VALIDATE $? "Enablled MySQL Server"
+VALIDATE $? "Enabled MySQL Server"
 
 systemctl start mysqld
 VALIDATE $? "Started MySQL Server"
