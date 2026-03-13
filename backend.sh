@@ -84,3 +84,6 @@ VALIDATE $? "Enabled backend"
 
 systemctl restart backend &>>$LOG_FILE
 VALIDATE $? "Restarted backend"
+
+
+# some inputs are taken from backend.service file which is in the same folder.  
