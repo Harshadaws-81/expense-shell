@@ -55,3 +55,5 @@ else
     echo -e "MYSQL root password is already setup... $Y SKIPPING $N" | tee -a $LOG_FILE
 fi
 
+# this is database server for our application, 
+# we will connect to this database server from our backend application
